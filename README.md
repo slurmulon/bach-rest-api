@@ -13,7 +13,7 @@ lein ring server
 Then `POST` to `/track` to validate and parse your Warble tracks
 
 ```sh
-curl -H "Content-Type: text/plain" -X POST -d ":A = [1 -> Scale('C2 Major')] \!Play :A" http://localhost:3000/track
+curl -H "Content-Type: text/plain" -X POST -d "@/absolute/path/to/warble/file.warb" http://localhost:3000/track
 ```
 
 That's it :sparkles:
