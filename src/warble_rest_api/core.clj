@@ -9,12 +9,12 @@
 (defroutes app
   (ANY "/" [] (resource))
   (ANY "/track" []
-       (resource
-         :allowed-methods [:post]
-         :available-media-types ["application/json" "text/plain"]
-         :handle-created (fn [ctx]
-                           (let [body (slurp (get-in ctx [:request :body]))]
-                             (compile-track (parse body)))))))
+    (resource
+      :allowed-methods [:post]
+      :available-media-types ["application/json" "text/plain"]
+      :handle-created (fn [ctx]
+                        (let [body (slurp (get-in ctx [:request :body]))]
+                          (compile-track (parse body)))))))
 (def handler
   (-> app
       wrap-params))
