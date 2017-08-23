@@ -1,0 +1,1 @@
+- https://github.com/weavejester/compojure/issues/108 (example of content type weirdness!)

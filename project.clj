@@ -1,12 +1,15 @@
 (defproject warble-rest-api "0.1.0-SNAPSHOT"
-  :description "Simple RESTful HTTP interface for the Warble library"
-  :url "https://github.com/slurmulon/warble-rest-api"
-  :license {:name "MIT"
-            :url "https://opensource.org/licenses/MIT"}
-  :plugins [[lein-ring "0.8.11"]]
-  :ring {:handler warble-rest-api.core/handler}
+  :description "FIXME: write description"
+  :url "http://github.com/slurmulon/warble-rest-api"
+  :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [warble "0.1.0-SNAPSHOT"]
-                 [liberator "0.13"]
-                 [compojure "1.3.4"]
-                 [ring/ring-core "1.2.1"]])
+                 [compojure "1.5.1"]
+                 [ring/ring-json "0.4.0"]
+                 [ring-json-response "0.2.0"]
+                 [ring/ring-defaults "0.2.1"]]
+  :plugins [[lein-ring "0.9.7"]]
+  :ring {:handler warble-rest-api.handler/app}
+  :profiles
+  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                        [ring/ring-mock "0.3.0"]]}})
