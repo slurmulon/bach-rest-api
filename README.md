@@ -8,7 +8,7 @@
 
 You can find detailed information on the `warble` notation by visiting the [repository home page](https://github.com/slurmulon/warble).
 
-This module wraps the core `warble` module with a thin RESTful interface.
+This module simply wraps the core `warble` module with a thin RESTful interface.
 
 ## Usage
 
