@@ -2,6 +2,14 @@
 > :musical_score: :satellite: A simple Restful HTTP interface for the Warble library
 ---
 
+## Summary
+
+`warble` is a notation for representing musical tracks with a focus on human readability.
+
+You can find detailed information on the `warble` notation by visiting the [repository home page](https://github.com/slurmulon/warble).
+
+This module wraps the core `warble` module with a thin RESTful interface.
+
 ## Usage
 
 Run the server
