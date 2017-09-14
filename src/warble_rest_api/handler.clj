@@ -1,5 +1,5 @@
 (ns warble-rest-api.handler
-  (:require [warble.lexer :refer [parse]]
+  (:require [warble.ast :as ast]
             [warble.track :refer [compile-track]]
             [compojure.core :refer :all]
             [compojure.route :as route]
@@ -8,7 +8,7 @@
 
 (defroutes app-routes
   (GET "/" [] (json-response {:message "Warble REST API"}))
-  (POST "/track" {body :body} (json-response (-> body slurp parse compile-track)))
+  (POST "/track" {body :body} (json-response (-> body slurp ast/parse compile-track)))
   (route/not-found (json-response {:error "Not Found"})))
 
 (def app
