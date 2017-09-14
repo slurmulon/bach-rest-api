@@ -3,7 +3,7 @@
   :url "http://github.com/slurmulon/warble-rest-api"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [warble "0.1.0-SNAPSHOT"]
+                 [warble "0.2.0-SNAPSHOT"]
                  [compojure "1.5.1"]
                  [ring/ring-json "0.4.0"]
                  [ring-json-response "0.2.0"]
