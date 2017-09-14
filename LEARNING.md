@@ -1,1 +1,2 @@
-- https://github.com/weavejester/compojure/issues/108 (example of content type weirdness!)
+- https://github.com/weavejester/compojure/issues/108 (example of content type weirdness!
+- https://stackoverflow.com/questions/35840415/compojure-app-not-sending-csrf-by-default)
