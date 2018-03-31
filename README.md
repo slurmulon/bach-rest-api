@@ -21,7 +21,7 @@ lein ring server
 Then `POST` to `/track` to validate and parse your bach tracks
 
 ```sh
-curl -H "Content-Type: text/plain" -X POST -d "@/absolute/path/to/bach/file.warb" http://localhost:3000/track
+curl -H "Content-Type: text/plain" -X POST -d "@/absolute/path/to/bach/file.bach" http://localhost:3000/track
 ```
 
 That's it :sparkles:
