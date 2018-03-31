@@ -1,13 +1,14 @@
-(ns warble-rest-api.handler-test
+(ns bach-rest-api.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [warble-rest-api.handler :refer :all]))
+            [ring.util.json-response :refer [json-response]]
+            [bach-rest-api.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"
     (let [response (app (mock/request :get "/"))]
       (is (= (:status response) 200))
-      (is (= (:body response) "Hello World"))))
+      (is (= (:body response) (-> {:message "bach REST API" } json-response :body)))))
 
   (testing "not-found route"
     (let [response (app (mock/request :get "/invalid"))]
