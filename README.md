@@ -1,5 +1,5 @@
 # bach-rest-api
-> :musical_score: :satellite: A simple Restful HTTP interface for the bach library
+> :musical_score: :satellite: A simple Restful HTTP interface for the Bach library
 ---
 
 ## Summary
