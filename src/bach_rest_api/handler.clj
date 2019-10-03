@@ -4,11 +4,18 @@
             [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.util.json-response :refer [json-response]]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+            [clojure.tools.logging :as log]))
 
 (defroutes app-routes
-  (GET "/" [] (json-response {:message "bach REST API"}))
-  (POST "/track" {body :body} (json-response (-> body slurp ast/parse compile-track)))
+  (GET "/" [] (json-response {:message "Bach REST API"}))
+  (POST "/track" {body :body}
+        (try
+          (let [track (-> body slurp ast/parse compile-track)]
+            (json-response track))
+          (catch Exception e
+            (log/error e "Track compilation error")
+            (merge (json-response {:error (:via e)}) {:status 400}))))
   (route/not-found (json-response {:error "Not Found"})))
 
 (def app
