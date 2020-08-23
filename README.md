@@ -15,7 +15,7 @@ This module simply wraps the core `bach` module with a thin RESTful interface.
 Run the server
 
 ```
-lein ring server
+make serve
 ```
 
 Then `POST` to `/track` to validate and parse your bach tracks
