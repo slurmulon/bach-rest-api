@@ -1,4 +1,4 @@
-(defproject bach-rest-api "0.1.1"
+(defproject bach-rest-api "1.0.0"
   :description "Simple RESTful HTTP interface for the official Bach library"
   :url "http://github.com/slurmulon/bach-rest-api"
   :min-lein-version "2.0.0"
