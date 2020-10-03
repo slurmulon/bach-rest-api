@@ -1,9 +1,9 @@
-(defproject bach-rest-api "1.0.0"
+(defproject bach-rest-api "2.0.0"
   :description "Simple RESTful HTTP interface for the official Bach library"
   :url "http://github.com/slurmulon/bach-rest-api"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [bach "1.0.0-SNAPSHOT"]
+                 [bach "2.0.0-SNAPSHOT"]
                  [compojure "1.5.1"]
                  [ring/ring-json "0.4.0"]
                  [ring-json-response "0.2.0"]

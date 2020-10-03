@@ -1,6 +1,5 @@
 (ns bach-rest-api.handler
-  (:require [bach.ast :as ast]
-            [bach.track :refer [compile-track]]
+  (:require [bach.track :refer [compose]]
             [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.util.json-response :refer [json-response]]
@@ -13,7 +12,7 @@
   (POST "/track" {body :body}
         (let [source (slurp body)]
           (try
-            (let [track (-> source ast/parse compile-track)]
+            (let [track (compose source)]
               (log/info "[bach-rest-api/track] Valid track compiled. Source Bach data:")
               (log/info (prn source))
               (json-response track))
