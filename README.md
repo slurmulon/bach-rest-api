@@ -28,6 +28,6 @@ That's it :sparkles:
 
 ## License
 
-Copyright © 2017 MadHax, LLC
+Copyright © 2020 Erik Vavro
 
 MIT
